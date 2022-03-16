@@ -73,7 +73,8 @@ mongoose.connect(MONGODB_URI,(err,res)=>{
     console.log(`Mi acpi rest corrientdo en ${port}`)
 })
 })
-    
+
+// Hasta aquí funciona hoy
 
 
 

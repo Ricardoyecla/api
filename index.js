@@ -61,6 +61,7 @@ app.delete('/api/product/:productId',(req,res)=>{
 }) */
 
 const MONGODB_URI='mongodb+srv://ricardoyecla:8xm3rryhysf4MKwc@cluster0.h6pyu.mongodb.net/shop?retryWrites=true&w=majority'
+
 const port = process.env.PORT || 3000
 
 mongoose.connect(MONGODB_URI,(err,res)=>{

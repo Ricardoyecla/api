@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1></h1>
     <script>
-        let $cab=document.getElementsByTagName('h1')[0];
-        /* const pedirDatos= async(donde)=>{
+      let $cab = document.getElementsByTagName("h1")[0];
+      /* const pedirDatos= async(donde)=>{
             const respuesta= await fetch('http://localhost:3000/api/product') 
             let datos= await respuesta.json();
             console.log(datos)
             donde.innerHTML=datos
         } */
-        const pedirDatos= async(donde)=>{
-            const respuesta= await fetch('http://localhost:3000/api/product',{
-                method:'POST',
-                headers:{
-                    'Content-Type':'application/josn'
-                },
-                body:JSON.stringify({
-                    "name": "jopse",
-                    "picture": "jose.jpg",
-                    "category": "computers",
-                    "description": "ordenador de jose"
-                })
-            }) 
-            let datos= await respuesta.json();
-            console.log(datos)
-            donde.innerHTML=datos
-        }  
-        pedirDatos($cab);
+      var data = {
+        name: "example",
+        picture: "example.jpg",
+        category: "computers",
+        description: "ordenadore example"
+      };
+      const pedirDatos = async (donde) => {
+        const respuesta = await fetch("http://localhost:3000/api/product", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data),
+        });
+        let datos = await respuesta.json();
+        console.log(datos);
+        donde.innerHTML = datos;
+      };
+      pedirDatos($cab);
     </script>
-</body>
+  </body>
 </html>

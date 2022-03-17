@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    padding: 2rem;
+    display: flex;
+  }
+  main div{
+      margin: 0.5em;
+    padding: 1rem;
+    border: 1px solid;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }

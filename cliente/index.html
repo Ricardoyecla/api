@@ -1,40 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1></h1>
-    <script>
-      let $cab = document.getElementsByTagName("h1")[0];
-      /* const pedirDatos= async(donde)=>{
-            const respuesta= await fetch('http://localhost:3000/api/product') 
-            let datos= await respuesta.json();
-            console.log(datos)
-            donde.innerHTML=datos
-        } */
-      var data = {
-        name: "example2",
-        picture: "example.jpg2",
-        category: "computers",
-        description: "ordenadore example2"
-      };
-      const pedirDatos = async (donde) => {
-        const respuesta = await fetch("http://localhost:3000/api/product", {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data),
-        });
-        let datos = await respuesta.json();
-        console.log(datos);
-        donde.innerHTML = datos;
-      };
-      pedirDatos($cab);
-    </script>
-  </body>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <div>
+      <h2>Trae todos los productos</h2>
+      <button id='bTodos'>Todos</button>
+    </div>
+    <div>
+      <h2>Resultado</h2>
+      <button id='bTodos'>Todos</button>
+      <ul id="lTodos"></ul>
+    </div>
+    <div>
+      <h2>Trae todos los productos</h2>
+      <button id='bTodos'>Todos</button>
+      <ul id="lTodos"></ul>
+    </div>
+  </main>
+  <h1>quitar</h1>
+  <script src="src/datos.js"></script>
+
+</body>
+
 </html>

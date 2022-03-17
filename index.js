@@ -20,13 +20,22 @@ app.use(cors())
 /* app.get('/hola/:name',(req,res)=>{
     res.send({message:`Hola ${req.params.name}`})
 }) */
+
 app.get('/api/product',(req,res)=>{
     //console.log(req.body)
     res.status(200).send({"id":122,"nombre":"otro"})
 })
 
 app.get('/api/product/:productId',(req,res)=>{
-    
+    let productId=req.params.productId
+
+    Product.findById(productId,(err,product)=>{
+        if (err) return res.status(500).send({message:`Error al realizar petición ${err}`})
+        if (!product) return res.status(404).send({message:`El producto no existe`})
+
+        res.status(200).send({product})
+        console.log(product)
+    })
 })
 app.post('/api/product',(req,res)=>{
     console.log('POST /api/product')
@@ -53,12 +62,6 @@ app.delete('/api/product/:productId',(req,res)=>{
     
 })
 
-/* mongoose.connection('MONGODB_URI=mongodb+srv://ricardoyecla:8xm3rryhysf4MKwc@cluster0.h6pyu.mongodb.net/shop?retryWrites=true&w=majority',(err,res)=>{
-    if(err) throw err
-    console.log('conexión a mongodb realizada.')
-    
-    
-}) */
 
 const MONGODB_URI='mongodb+srv://ricardoyecla:8xm3rryhysf4MKwc@cluster0.h6pyu.mongodb.net/shop?retryWrites=true&w=majority'
 

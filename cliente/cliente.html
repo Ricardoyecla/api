@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./src/alumnos.js"></script>
     <title>Sociograma</title>
     <style>
       * {
@@ -19,23 +20,44 @@
         justify-content: center;
       }
       .padre-flex > div {
-        height: 50vh;
-        width: 50vw;
+        height: 90vh;
+        width: 90vw;
         background-color: pink;
-        text-align: center;
         padding: 2em;
+        display: flex;
+      }
+      ul > li {
+        list-style: none;
+      }
+      #info_alumnos {
+        width: 25%;
+        padding: 1em;
+        background-color: burlywood;
+      }
+      #info_alumnos h2 {
+        text-align: center;
+        margin-bottom: 1em;
       }
     </style>
   </head>
   <body>
     <div class="padre-flex">
       <div>
-        <h1>Juego flex</h1>
-        <p>
-          Un juego donde ayudarás a Froggy y a sus amigos escribiendo código CSS
+        <div id="info_alumnos">
+          <h2>Compañeros</h2>
+          <ul id="alumnos"></ul>
+        </div>
+        <div>
+          <p>
+            Un juego donde ayudarás a Froggy y a sus amigos escribiendo código
+            CSS
             <a href="https://flexboxfroggy.com/#es">Juego Flex</a>
-        </p>
+          </p>
+        </div>
       </div>
     </div>
+    <script>
+      Crear_Lista_Alumnos(alumnos);
+    </script>
   </body>
 </html>

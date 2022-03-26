@@ -81,15 +81,13 @@ const alumnos = [
   },
 ];
 
-function Crear_Lista_Alumnos(alumnos){
-    let $lista=document.getElementById('alumnos')
+function Crear_Lista_Alumnos(alumnos) {
+  let $lista = document.getElementById("alumnos");
 
-    alumnos.forEach((elemento, posicion) => {
-        let $liAlumno=document.createElement('li');
-         $liAlumno.innerHTML=elemento.nombre+`<div>${posicion}</div>`;
-          $lista.appendChild($liAlumno)
-       
-    });
-   
+  alumnos.forEach((elemento, posicion) => {
+    let $Alumno = document.createElement("div");
+    $Alumno.classList.add('fila_alumno')
+    $Alumno.innerHTML = `<div class='posicion'>${posicion}</div><div class='nombre'> ${elemento.nombre} </div>`;
+    $lista.appendChild($Alumno);
+  });
 }
-

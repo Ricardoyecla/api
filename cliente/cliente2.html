@@ -13,28 +13,40 @@
         margin: 0;
       }
       .padre-flex {
+        padding: 2em;
         background: #a8c7d6;
-        height: 100vh;
         display: flex;
-        align-items: center;
         justify-content: center;
       }
       .padre-flex > div {
-        height: 90vh;
-        width: 90vw;
         background-color: pink;
         padding: 2em;
         display: flex;
       }
-      
-      #info_alumnos {
-        width: 25%;
+      #info_alumnos, #preguntas{
         padding: 1em;
+      }
+      #info_alumnos {
+        flex-grow: 1;
         background-color: burlywood;
       }
-      #info_alumnos h2 {
+      #preguntas{
+        background-color: rgb(238, 234, 31);
+        flex-grow: 1;
+      }
+      #info_alumnos h2, #preguntas h2 {
         text-align: center;
         margin-bottom: 1em;
+      }
+     
+      .nombre{
+        flex-basis: 75%;
+        color: white;
+      }
+      .posicion{
+        flex-basis: 25%;
+        background-color: #a8c7d6;
+        color: yellow;
       }
     
     </style>
@@ -44,19 +56,20 @@
       <div>
         <div id="info_alumnos">
           <h2>Compañeros</h2>
-          <ul id="alumnos"></ul>
+          <div id="alumnos"></div>
         </div>
-        <div>
+        <div id="preguntas">
+          <h2>Encuesta</h2>
           <p>
             Un juego donde ayudarás a Froggy y a sus amigos escribiendo código
-            CSS
+            CSS xxxxxxxxxx  eeeeeeeeeeeeeeeeeeeeeee bbbbbbbbbbbbbbb xx
             <a href="https://flexboxfroggy.com/#es">Juego Flex</a>
           </p>
         </div>
       </div>
     </div>
     <script>
-     // Crear_Lista_Alumnos(alumnos);
+      Crear_Lista_Alumnos(alumnos);
     </script>
   </body>
 </html>

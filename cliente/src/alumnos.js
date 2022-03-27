@@ -78,7 +78,27 @@ const alumnos = [
   {
     id: 20,
     nombre: "Pierre Gasly",
+  },{
+    id: 1,
+    nombre: "Charles Leclerc",
   },
+  {
+    id: 2,
+    nombre: "Carlos Sainz",
+  },
+  {
+    id: 3,
+    nombre: "Lewis Hamilton",
+  },
+  {
+    id: 4,
+    nombre: "George Russell",
+  },
+  {
+    id: 5,
+    nombre: "Kevin Magnussen",
+  }
+
 ];
 
 function Crear_Lista_Alumnos(alumnos){
@@ -86,8 +106,9 @@ function Crear_Lista_Alumnos(alumnos){
 
     alumnos.forEach((elemento, posicion) => {
         let $nodo_alumno =document.createElement('div');
+          $nodo_alumno.classList.add('alumnos')
           $nodo_alumno.innerHTML=
-            `<div>${elemento.nombre}</div><div>${posicion}</div>`;
+            `<div class='numero'>${posicion}</div><div class='nombre'>${elemento.nombre}</div>`;
         $info_alu.appendChild($nodo_alumno)
        
     });

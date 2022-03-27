@@ -24,6 +24,7 @@
       background-color: pink;
       padding: 1em;
       display: flex;
+      flex-direction: column;
     }
 
     #info_alumnos,
@@ -35,7 +36,8 @@
       flex-grow: 1;
       background-color: burlywood;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
 
     #preguntas {
@@ -51,16 +53,16 @@
 
     .alumnos {
       display: flex;
-      margin-bottom: 0.2rem;
+      width: 20%;
+      flex-direction: row;
+     padding: 0.5rem;
     }
 
     .nombre {
-      flex-basis: 10rem;
       flex-grow: 5;
     }
 
     .numero {
-      flex-basis: 2rem;
       flex-grow: 1;
       text-align: center;
       background-color: khaki;
@@ -74,8 +76,9 @@
 <body>
   <div class="padre-flex">
     <div>
+       <h1>Compañeros</h1>
       <div id="info_alumnos">
-        <h1>Compañeros</h1>
+       
       </div>
       <div id="preguntas">
         <h1>Encuesta</h1>

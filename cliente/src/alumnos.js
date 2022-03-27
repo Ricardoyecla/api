@@ -82,12 +82,13 @@ const alumnos = [
 ];
 
 function Crear_Lista_Alumnos(alumnos){
-    let $lista=document.getElementById('alumnos')
+    const $info_alu=document.getElementById('info_alumnos')
 
     alumnos.forEach((elemento, posicion) => {
-        let $liAlumno=document.createElement('li');
-         $liAlumno.innerHTML=elemento.nombre+`<div>${posicion}</div>`;
-          $lista.appendChild($liAlumno)
+        let $nodo_alumno =document.createElement('div');
+          $nodo_alumno.innerHTML=
+            `<div>${elemento.nombre}</div><div>${posicion}</div>`;
+        $info_alu.appendChild($nodo_alumno)
        
     });
    

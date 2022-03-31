@@ -18,9 +18,10 @@
       display: flex;
       justify-content: center;
     }
+
     .padre-flex>div {
       flex-basis: 100%;
-      height: 100vh;
+      height: 100vh; 
       background-color: pink;
       padding: 1em;
       display: flex;
@@ -29,20 +30,19 @@
 
     #info_alumnos,
     #preguntas {
-      padding: 1em;
+      padding: 0.5em;
     }
 
     #info_alumnos {
-      flex-grow: 1;
       background-color: burlywood;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      /*  display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; */
     }
 
     #preguntas {
-      background-color: rgb(238, 234, 31);
-      flex-grow: 4;
+      flex-grow: 1;
+      display: flex;
     }
 
     #info_alumnos h1,
@@ -52,23 +52,64 @@
     }
 
     .alumnos {
-      display: flex;
-      width: 20%;
-      flex-direction: row;
-     padding: 0.5rem;
+      width: 15em;
+      float: left;
+      padding: 0.5rem;
+    }
+
+    h1 {
+      text-align: center;
     }
 
     .nombre {
-      flex-grow: 5;
+      float: left;
     }
 
     .numero {
-      flex-grow: 1;
+      float: left;
+      width: 12%;
       text-align: center;
       background-color: khaki;
       border-radius: 15%;
-      align-self: center;
-      margin-right: 0.5rem;
+      padding: 0.1rem;
+      margin-right: 0.4rem;
+    }
+
+    #bloque1,
+    #bloque2 {
+      padding: 1em;
+      flex-basis: 50%;
+      font-size: larger;
+    }
+
+    #bloque1 p,
+    #bloque2 p {
+      margin-top: 0.5em;
+    }
+
+    #bloque1 {
+      background-color: deepskyblue;
+    }
+
+    #bloque2 {
+      background-color: aquamarine;
+    }
+
+    #bloque1 input[type="number"] {
+      width: 3em;
+      margin-right: 1em;
+    }
+
+    #bloque2 input[type="number"] {
+      width: 3em;
+      margin-right: 1em;
+      vertical-align: top;
+    }
+    h2{
+      background-color: gray;
+      color: aliceblue;
+      text-align: center;
+      padding: 0.3em;
     }
   </style>
 </head>
@@ -76,17 +117,68 @@
 <body>
   <div class="padre-flex">
     <div>
-       <h1>Compañeros</h1>
-      <div id="info_alumnos">
-       
-      </div>
+      <h1>Compañeros</h1>
+      <div id="info_alumnos"></div>
       <div id="preguntas">
-        <h1>Encuesta</h1>
-        <p>
-          Un juego donde ayudarás a Froggy y a sus amigos escribiendo código
-          CSSsa
-          <a href="https://flexboxfroggy.com/#es">Juego Flex</a>
-        </p>
+        <div id="bloque1">
+          <p>
+            Imagina que vamos a cambiar de clase, ¿qué 3 compañeros te
+            gustaría que fueran contigo? <strong>SUS NÚMEROS</strong>
+          </p>
+          <p>
+            <input type="number" name="" id="" /><input type="number" name="" id="" /><input type="number" name=""
+              id="" />
+          </p>
+          <p>
+            ¿Qué 3 compañeros crees que te habrán elegido a ti para cambiar de
+            clase?
+          </p>
+          <p>
+            <input type="number" name="" id="" /><input type="number" name="" id="" /><input type="number" name=""
+              id="" />
+          </p>
+          <p>
+            ¿Qué 3 compañeros crees que no te habrán elegido para esa clase?
+          </p>
+          <p>
+            <input type="number" name="" id="" /><input type="number" name="" id="" /><input type="number" name=""
+              id="" />
+          </p>
+          <p>¿Qué compañeros preferirías que no fueran a esa clase?</p>
+          <p>
+            <input type="number" name="" id="" /><input type="number" name="" id="" /><input type="number" name=""
+              id="" />
+          </p>
+        </div>
+        <div id="bloque2">
+          <p>
+            ¿Crees que hay algún/os compañero/s de tu clase que lo estén
+            pasando mal?
+          </p>
+          <p>
+            <input type="number" name="" id="" /><textarea name="" id="" cols="50" rows="2"
+              placeholder="Indica el motivo"></textarea>
+          </p>
+          <p>
+            <input type="number" name="" id="" /><textarea name="" id="" cols="50" rows="2"
+              placeholder="Indica el motivo"></textarea>
+          </p>
+          <p>
+            <input type="number" name="" id="" /><textarea name="" id="" cols="50" rows="2"
+              placeholder="Indica el motivo"></textarea>
+          </p>
+          <p>Lo que más te gusta del Instituto es</p>
+          <p>
+            <textarea name="" id="" cols="50" rows="2" placeholder="Indica lo que más te gusta"></textarea>
+          </p>
+          <p>¿Qué te gustaría que cambiara del Instituto?</p>
+          <p>
+            <textarea name="" id="" cols="50" rows="2" placeholder="Indica lo que cambiarías"></textarea>
+          </p>
+        </div>
+      </div>
+      <div id="enviar">
+       <h2>Enviar</h2>
       </div>
     </div>
   </div>

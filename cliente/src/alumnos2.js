@@ -106,12 +106,15 @@ function Crear_Lista_Alumnos(alumnos){
 
     alumnos.forEach((elemento, posicion) => {
         let $nodo_alumno =document.createElement('div');
-          $nodo_alumno.classList.add('alumnos')
-          $nodo_alumno.classList.add('alumnos')
           
-
+          $nodo_alumno.classList.add('col-lg-2')
+          $nodo_alumno.classList.add('col-md-2')
+          $nodo_alumno.classList.add('col-md-4')
+          $nodo_alumno.classList.add('col-sm-6')
+          $nodo_alumno.classList.add('col-6')
+          $nodo_alumno.classList.add('border')
           $nodo_alumno.innerHTML=
-            `<div class='numero'>${posicion}</div><div class='nombre'>${elemento.nombre}</div>`;
+            `<span>${posicion}</span>${elemento.nombre}`;
         $alumnos.appendChild($nodo_alumno)
        
     });

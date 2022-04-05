@@ -19,8 +19,8 @@
   <div class="container-fluid">
     <!-- Cabecera con listado de alumnos fijos-->
     <div class="row sticky-top bg-white">
-      <div class="col-12 ">
-        <h2 class=" text-center alert alert-warning">Listado de alumnos</h2>
+      <div class="col-12 d-flex justify-content-around ">
+        <h2 class=" text-center alert alert-warning">Listado de alumnos</h2><p class="align-self-center btn btn-danger">Enviar</p>
       </div>
       <div id="alumnos" class="d-flex flex-wrap">
       </div>
@@ -59,8 +59,7 @@
           <!--Enunciado pregunta 2-->
           <div class="col-12">
             <div class="alert alert-primary">
-              <label for="p1" class="form-label">Imagina que vamos a cambiar de clase, ¿qué 3 compañeros te
-                gustaría que fueran contigo? <strong>SUS NÚMEROS</strong></label>
+              <label for="p1" class="form-label">¿Qué 3 compañeros crees que te habrán elegido a ti para cambiar de clase? <strong>SUS NÚMEROS</strong></label>
               <!--respuesta pregunta 2-->
               <div class="row">
                 <div class="col">
@@ -78,17 +77,13 @@
         </div>
         <!--Fin Segunda pregunta-->
         
-      </div>
-      <!--Preguntas Bloque2-->
-      <div class="col-12 col-md-6 ">
-        <!-- Primera pregunta -->
+        <!-- Tercera pregunta -->
         <div class="row">
           <!--Enunciado pregunta 1-->
           <div class="col-12">
             <div class="alert alert-primary">
-              <label for="p1" class="form-label">Imagina que vamos a cambiar de clase, ¿qué 3 compañeros te
-                gustaría que fueran contigo? <strong>SUS NÚMEROS</strong></label>
-              <!--respuesta pregunta 1-->
+              <label for="p1" class="form-label">¿Qué 3 compañeros crees que no te habrán elegido para esa clase? <strong>SUS NÚMEROS</strong></label>
+              <!--respuesta pregunta tercera-->
               <div class="row">
                 <div class="col">
                   <input type="number" class="form-control" placeholder="Número" aria-label="Número de alumno">
@@ -103,80 +98,103 @@
             </div>
           </div>
         </div>
-        <!--Fin respuesta pregunta 1-->
+        <!--Fin Tercera pregunta-->
+
+        <!-- Cuarta pregunta -->
+        <div class="row">
+          <!--Enunciado pregunta cuarta-->
+          <div class="col-12">
+            <div class="alert alert-primary">
+              <label for="p1" class="form-label">¿Qué compañeros preferirías que no fueran a esa clase? <strong>SUS NÚMEROS</strong></label>
+              <!--respuesta pregunta Cuarta-->
+              <div class="row">
+                <div class="col">
+                  <input type="number" class="form-control" placeholder="Número" aria-label="Número de alumno">
+                </div>
+                <div class="col">
+                  <input type="number" class="form-control" placeholder="Número" aria-label="Número de alumno ">
+                </div>
+                <div class="col">
+                  <input type="number" class="form-control" placeholder="Número" aria-label="Número de alumno ">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin Segunda Cuarta-->
+      </div>
+      <!--Preguntas Bloque2-->
+      <div class="col-12 col-md-6 ">
+        <!-- Quinta pregunta -->
+        <div class="row">
+          <!--Enunciado pregunta quinta1-->
+          <div class="col-12">
+            <div class="alert alert-primary">
+              <label for="p1" class="form-label">Lo que más te gusta del Instituto  es </label>
+              <!--respuesta pregunta quinta-->
+              <div class="row">
+                <div class="col">
+                  <textarea class="form-control" id="p5" aria-label=">Lo que más te gusta del Instituto  es" rows="2"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin respuesta pregunta quinta-->
+
+         <!-- Sexta pregunta -->
+         <div class="row">
+          <!--Enunciado pregunta Sexta-->
+          <div class="col-12">
+            <div class="alert alert-primary">
+              <label for="p1" class="form-label">¿Qué te gustaría que cambiara del Instituto?</label>
+              <!--respuesta pregunta Sexta-->
+              <div class="row">
+                <div class="col">
+                  <textarea class="form-control" id="p6" aria-label="¿Qué te gustaría que cambiara del Instituto?" rows="2"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin respuesta pregunta Sexta-->
+
+         <!-- Septima pregunta -->
+         <div class="row">
+          <!--Enunciado pregunta Septima-->
+          <div class="col-12">
+            <div class="alert alert-primary">
+              <label for="p1" class="form-label">¿Crees que hay algún/os compañero/s de tu clase que lo estén pasando mal? </label>
+              <!--respuesta pregunta septima-->
+              <div class="row">
+                <div class="col-3">
+                  <input type="number" class="form-control" placeholder="Número" aria-label="Número de alumno">
+                </div>
+                <div class="col-9">
+                  <textarea class="mb-2 form-control" id="exampleFormControlTextarea1" placeholder="Indica el motivo" rows="2" aria-label="Motivo "></textarea>
+                </div>
+                <div class="col-3">
+                  <input type="number" class="form-control" placeholder="Número" aria-label="Número de alumno">
+                </div>
+                <div class="col-9">
+                  <textarea class="mb-2 form-control" id="exampleFormControlTextarea1" placeholder="Indica el motivo" rows="2" aria-label="Motivo "></textarea>
+                </div>
+                <div class="col-3">
+                  <input type="number" class="form-control" placeholder="Número" aria-label="Número de alumno">
+                </div>
+                <div class="col-9">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Indica el motivo" rows="2" aria-label="Motivo "></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin respuesta pregunta septima-->
 
       </div>
-    </div>
+    </div>            
 
   </div>
-
-  <!-- <div class="padre-flex">
-    <div>
-      <h1>Compañeros</h1>
-      <div id="info_alumnos"></div>
-      <div id="preguntas">
-        <div id="bloque1">
-          <p>
-            Imagina que vamos a cambiar de clase, ¿qué 3 compañeros te
-            gustaría que fueran contigo? <strong>SUS NÚMEROS</strong>
-          </p>
-          <p>
-            <input type="number" name="" id="" /><input type="number" name="" id="" /><input type="number" name=""
-              id="" />
-          </p>
-          <p>
-            ¿Qué 3 compañeros crees que te habrán elegido a ti para cambiar de
-            clase?
-          </p>
-          <p>
-            <input type="number" name="" id="" /><input type="number" name="" id="" /><input type="number" name=""
-              id="" />
-          </p>
-          <p>
-            ¿Qué 3 compañeros crees que no te habrán elegido para esa clase?
-          </p>
-          <p>
-            <input type="number" name="" id="" /><input type="number" name="" id="" /><input type="number" name=""
-              id="" />
-          </p>
-          <p>¿Qué compañeros preferirías que no fueran a esa clase?</p>
-          <p>
-            <input type="number" name="" id="" /><input type="number" name="" id="" /><input type="number" name=""
-              id="" />
-          </p>
-        </div>
-        <div id="bloque2">
-          <p>
-            ¿Crees que hay algún/os compañero/s de tu clase que lo estén
-            pasando mal?
-          </p>
-          <p>
-            <input type="number" name="" id="" /><textarea name="" id="" cols="50" rows="2"
-              placeholder="Indica el motivo"></textarea>
-          </p>
-          <p>
-            <input type="number" name="" id="" /><textarea name="" id="" cols="50" rows="2"
-              placeholder="Indica el motivo"></textarea>
-          </p>
-          <p>
-            <input type="number" name="" id="" /><textarea name="" id="" cols="50" rows="2"
-              placeholder="Indica el motivo"></textarea>
-          </p>
-          <p>Lo que más te gusta del Instituto es</p>
-          <p>
-            <textarea name="" id="" cols="50" rows="2" placeholder="Indica lo que más te gusta"></textarea>
-          </p>
-          <p>¿Qué te gustaría que cambiara del Instituto?</p>
-          <p>
-            <textarea name="" id="" cols="50" rows="2" placeholder="Indica lo que cambiarías"></textarea>
-          </p>
-        </div>
-      </div>
-      <div id="enviar">
-       <h2>Enviar</h2>
-      </div>
-    </div>
-  </div> -->
   <script>
     Crear_Lista_Alumnos(alumnos);
   </script>

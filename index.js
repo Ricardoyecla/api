@@ -53,7 +53,6 @@ app.post('/api/product',(req,res)=>{
 
         res.status(200).send({product: productoStrored})
     })
-    
 })
 app.put('/api/product/:productId',(req,res)=>{
     
@@ -62,8 +61,8 @@ app.delete('/api/product/:productId',(req,res)=>{
     
 })
 
-
-const MONGODB_URI='mongodb+srv://ricardoyecla:8xm3rryhysf4MKwc@cluster0.h6pyu.mongodb.net/shop?retryWrites=true&w=majority'
+//const MONGODB_URI='mongodb+srv://ricardoyecla:8xm3rryhysf4MKwc@cluster0.h6pyu.mongodb.net/shop?retryWrites=true&w=majority'
+const MONGODB_URI='mongodb://localhost:27017/shop'
 
 const port = process.env.PORT || 3000
 

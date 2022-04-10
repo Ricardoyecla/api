@@ -8,9 +8,29 @@
     display: flex;
   }
   main div{
-      margin: 0.5em;
+    margin: 0.5em;
     padding: 1rem;
     border: 1px solid;
     flex-wrap: wrap;
-    flex-grow: 1;
+    flex-basis: 25%;
+   flex-grow: 1;
+  }
+  label,input{
+    margin-bottom: 0.75em;
+  }
+  .formulario{
+    display: flex;
+  }
+ label{
+   flex-basis: 25%;
+   text-align: left;
+   margin-right: 1em;
+ }
+ input{ 
+    flex-basis: 70%;
+  }
+  button{
+    padding: 0.5em;
+    width: 50%;
+    justify-self: center;
   }

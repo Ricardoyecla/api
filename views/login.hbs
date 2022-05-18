@@ -1,0 +1,43 @@
+<form id="login" method="post">
+    <input type="email" name="name" placeholder="Tu email">
+    <br>
+    <input type="password" name="password" value="" placeholder="contraseña">
+    <br>
+    <input id="bLogin" type="submit" value="login">
+</form>
+<button type="button" id="cerrarSesion">Cerrar sesión</button>
+
+
+<script>
+    const $bLogin = document.getElementById('bLogin')
+
+
+    $bLogin.addEventListener('click', event => {
+        event.preventDefault();
+        var data = {
+            email: 'mi@email.com',
+            password: 'pass'
+        }
+
+        console.log(`Datos al entrar en login.hbs ${data.email}`)
+
+        fetch('/api/signin', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data.token)
+                sessionStorage.setItem('token', data.token)
+            })
+            .catch(err => { console.log(`Error en el login ${err}`) })
+    })
+
+    document.getElementById('cerrarSesion').addEventListener('click', e => {
+        sessionStorage.removeItem('token')
+    })
+</script>
